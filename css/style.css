@@ -70,9 +70,15 @@ b {
   font-variation-settings: "opsz" 12, "wght" 700, "GRAD" 0;
 }
 .top-links {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 2px solid #903;
+  border-bottom: 2px solid #903;
+  justify-content: space-evenly;
   font-variant-caps: all-small-caps;
   margin-top: 10px;
-  padding: 10px;
+  margin-bottom: 20px;
+  padding: 2px;
   text-align: center;
   font-variation-settings: "opsz" 18, "wght" 300, "GRAD" 0;
 }

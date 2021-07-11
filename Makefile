@@ -55,7 +55,7 @@ PANDOC_EPUB_OPTIONS=--to epub3
 
 # Targets and dependencies
 
-.PHONY: all clean
+.PHONY: all clean rebuild
 
 all: $(EXPORTED_DOCS)
 
