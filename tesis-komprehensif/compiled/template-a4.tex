@@ -1,0 +1,158 @@
+\documentclass[10pt,a4paper]{article}
+
+%===========================================%
+% USEPACKAGES
+%===========================================%
+\usepackage[bahasa]{babel}
+\usepackage{booktabs}
+\usepackage{etoolbox}
+\usepackage{fancyhdr}
+\usepackage{graphicx}
+\usepackage[hidelinks]{hyperref}
+\usepackage{titlesec}
+\usepackage{titletoc}
+\usepackage[normalem]{ulem}
+\usepackage{multicol}
+
+%===========================================%
+% FONT FAMILY
+%===========================================%
+%\usepackage{newtxtext,newtxmath}
+%\usepackage{venturis}
+\usepackage{coelacanth}
+
+%===========================================%
+% GEOMETRY
+%===========================================%
+\usepackage{geometry}
+\geometry{
+ inner=0.85in,
+ outer=0.85in,
+ bottom=1.2in,
+ top=1.15in,
+ headsep=0.2in,
+}
+
+\AtBeginEnvironment{quote}{\small}
+\renewenvironment{quote}
+{\list{}{%
+       \leftmargin 1.5em 
+       \rightmargin 0em}
+   \item\relax}
+{\endlist}
+
+%===========================================%
+% HEADINGS
+%===========================================%
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\sectionmark}[1]{\markboth{{#1}}{}}
+\renewcommand{\subsectionmark}[1]{\markright{#1}}
+\fancyhead[L]{\nouppercase{\leftmark}}
+\fancyhead[C]{\nouppercase{\textit{\rightmark}}}
+\fancyhead[R]{\thepage}
+\renewcommand{\headrulewidth}{1pt}
+
+%===========================================%
+% TYPOGRAPHY
+%===========================================%
+\usepackage[activate={true,nocompatibility},
+kerning=true,spacing=true,tracking=true,final,
+letterspace=80]{microtype}
+\microtypecontext{spacing=nonfrench}
+\lefthyphenmin=3
+\righthyphenmin=3
+\def\tightlist{}
+\widowpenalty4000
+\clubpenalty4000
+\emergencystretch 2em
+\usepackage{enumitem} 
+\setlist[enumerate]{itemsep=1pt}
+
+%===========================================%
+% HEADER A
+%===========================================%
+\titleformat{\section}
+  {\centering\Large\bfseries}{}{0pt}{}
+\titleformat{\subsection}
+  {\bf\large}{}{1em}{}
+\titleformat{\subsubsection}
+  {\bf\normalsize}{\alph{subsubsection}.}{0.5em}{}
+
+%===========================================%
+% TOC STYLES
+%===========================================%
+\titlecontents{section}% <section-type>
+  [0em]% <left>
+  {\bfseries}% <above-code>
+  {}% <numbered-entry-format>
+  {}% <numberless-entry-format>
+  {\titlerule*[2mm]{.}\contentspage}% <filler-page-format>
+
+\renewcommand{\thesubsection}{\arabic{subsection}}
+\titlecontents{subsection}% <section-type>
+  [0.5em]% <left>
+  {}% <above-code>
+  {}% <numbered-entry-format>
+  {}% <numberless-entry-format>
+  {\titlerule*[2mm]{.}\contentspage}% <filler-page-format>
+
+%===========================================%
+% METADATA
+%===========================================%
+\title{Pembahasan Tesis-tesis Komprehensif Prodi Filsafat}
+
+%===========================================%
+% TITLE PAGE
+%===========================================%
+\begin{document}
+\begin{titlepage}
+	\begin{center}
+    \vfill
+		{\lsstyle\Huge PEMBAHASAN TESIS-TESIS KOMPREHENSIF\par}
+    \vfill
+    {\lsstyle\LARGE PRODI FILSAFAT\par}
+    \vfill
+    \includegraphics[width=4cm,height=4cm]{logo-stfd-lustrum.png}
+    \vfill
+    {\lsstyle\Large SEKOLAH TINGGI FILSAFAT\par}
+    {\lsstyle\Large DRIYARKARA\par}
+    \vfill
+    {\lsstyle\Large JAKARTA\par}
+		{\Large 2019\par}
+\end{center}
+\end{titlepage}
+
+%===========================================%
+% CREDITS
+%===========================================%
+%\thispagestyle{empty}
+%\hspace{0pt}
+%\vfill
+%\vfill
+%\begin{center}
+%{Typesetting oleh Aaron P. Murniadi}\par
+%{Terima Kasih Kepada:}\par
+%{\textit{Martinus Dam Febrianto, SJ}}\par
+%{\textit{Komunitas SJ}}\par
+%{\textit{Komunitas Projo}}\par
+%\vfill
+%{\today}\par
+%\vfill
+%\textit{"Ex Philosophia Claritas"}\par
+%\end{center}
+%\vfill
+%\vfill
+%\vfill
+%\hspace{0pt}
+
+%===========================================%
+% TABLE OF CONTENTS
+%===========================================%
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{2}
+\begin{multicols}{2}
+\tableofcontents
+$body$
+\end{multicols}
+\end{document}

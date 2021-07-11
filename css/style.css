@@ -1,0 +1,420 @@
+@font-face {
+  font-family: "Elstob";
+  src: url("../fonts/Elstob.woff2");
+  font-weight: 200 800;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Elstob";
+  src: url("../fonts/Elstob-Italic.woff2");
+  font-weight: 200 800;
+  font-style: italic;
+}
+@keyframes fadein {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+:root {
+  --font-serif: "Elstob", "Times New Roman", "Georgia", serif;
+  --font-sans-serif: "Elstob", "Times New Roman", "Georgia", serif;
+  --text-color: #222222;
+}
+html {
+  animation: fadein 1s;
+  text-rendering: optimizeLegibility;
+  color: var(--text-color);
+  font-size: 19px;
+  font-variant-numeric: oldstyle-nums;
+  font-feature-settings: "kern";
+  font-variant-ligatures: common-ligatures;
+  -moz-font-feature-settings: "kern=1";
+  font-variation-settings: "opsz" 18, "wght" 400, "GRAD" 0;
+}
+body {
+  width: 100%;
+  line-height: 1.5em;
+  font-family: var(--font-sans-serif);
+  -webkit-animation: fadein 1s;
+  /* Safari, Chrome and Opera > 12.1 */
+  -moz-animation: fadein 1s;
+  /* Firefox < 16 */
+  -ms-animation: fadein 1s;
+  /* Internet Explorer */
+  -o-animation: fadein 1s;
+  /* Opera < 12.1 */
+  animation: fadein 1s;
+}
+.main-index {
+  margin: auto;
+  width: 700px;
+}
+.main-article {
+  margin: auto;
+  max-width: 720px;
+}
+a {
+  transition: color 0.25s linear;
+  cursor: pointer;
+  text-decoration: none;
+  color: var(--text-color);
+  font-variation-settings: "opsz" 18, "wght" 400, "GRAD" 0;
+}
+a:hover {
+  text-decoration: underline;
+}
+b {
+  font-variation-settings: "opsz" 12, "wght" 700, "GRAD" 0;
+}
+.top-links {
+  font-variant-caps: all-small-caps;
+  margin-top: 10px;
+  padding: 10px;
+  text-align: center;
+  font-variation-settings: "opsz" 18, "wght" 300, "GRAD" 0;
+}
+.top-links a {
+  margin: auto;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+}
+.top-links hr {
+  color: #903;
+}
+.avatar {
+  width: auto;
+  height: 100%;
+}
+.profile,
+.archive,
+footer {
+  margin: auto;
+  padding: 10px;
+}
+.comments {
+  margin-top: 100px;
+}
+footer hr {
+  width: 600;
+  color: #903;
+}
+.about {
+  padding: 1.5em;
+}
+.about h3 {
+  margin-top: 2em;
+}
+.profile {
+  background-color: #903;
+  padding: 20px 30px;
+  line-height: 1em;
+  color: white;
+}
+.profile a {
+  color: white;
+}
+.profile h1 {
+  text-align: left;
+  font-variation-settings: "opsz" 18, "wght" 500, "GRAD" 0;
+}
+.archive h2 {
+  font-variation-settings: "opsz" 18, "wght" 400, "GRAD" 0;
+}
+.archive-date {
+  padding-top: 100px;
+}
+.archive table {
+  table-layout: fixed;
+  display: inline-block;
+  flex-wrap: wrap;
+  width: auto;
+  overflow: auto;
+  border-collapse: collapse;
+}
+.archive table tr td {
+  padding: 0.35em 0.5em;
+}
+.archive tr:nth-child(odd) {
+  background-color: #f2f2f2;
+}
+.archive table td:nth-child(1) {
+  text-decoration: none;
+  white-space: nowrap;
+}
+.archive table td:nth-child(2) {
+  padding-left: 20px;
+  text-align: left;
+}
+.archive table tr {
+  vertical-align: top;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: var(--font-sans-serif);
+  line-height: 1em;
+}
+.article h2:nth-of-type(1) + p::first-letter {
+  font-size: 5.4em;
+  font-variation-settings: "opsz" 18, "wght" 600, "GRAD" 0;
+  padding: 5px 10px 5px 0px;
+  margin-top: 5px;
+  float: left;
+  line-height: 1em;
+  color: #903;
+  display: inline;
+}
+
+.article h2:nth-of-type(1) + p::first-line {
+  font-variant-caps: all-small-caps;
+  font-variation-settings: "opsz" 18, "wght" 400, "GRAD" 0;
+  letter-spacing: 0.5pt;
+}
+
+.article {
+  margin: auto;
+  box-shadow: 0 1px 10px 1px rgba(60, 64, 67, 0.15);
+  padding: 3em 3em;
+  text-align: justify;
+  font-family: var(--font-serif);
+}
+.article-author {
+  text-align: center;
+  color: #777777;
+  font-variant-numeric: oldstyle-nums;
+}
+.article blockquote {
+  margin-right: 0em;
+  margin-left: 0em;
+  border-left: 4px solid #903;
+  background-color: #f8f8f8;
+  padding: 5px 30px;
+  line-height: 1.45em;
+  font-size: 0.9em;
+}
+.article table {
+  text-align: left;
+  font-size: 0.9em;
+}
+.article table th,
+td {
+  padding: 0px;
+}
+.article table tr {
+  vertical-align: top;
+}
+.article blockquote p {
+  text-indent: 0em;
+}
+.article p {
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+  font-variant-numeric: lining-nums;
+}
+.article sup {
+  text-decoration: none;
+  color: #903;
+  font-variation-settings: "opsz" 18, "wght" 600, "GRAD" 0;
+}
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p {
+  text-indent: 0em !important;
+}
+/*h2 + p:first-letter {
+  color: #903;
+  float: left;
+  font-size: 100px;
+  margin-left: 0em;
+  padding-top: 12px;
+  padding-right: 8px;
+  padding-left: 3px;
+}*/
+.article h1 {
+  margin-bottom: 0.3em;
+  text-align: center;
+  line-height: 1.15em;
+  font-size: 2.25em;
+  font-variation-settings: "opsz" 18, "wght" 400, "GRAD" 0;
+}
+.article-toc {
+  text-align: left;
+}
+.article-toc li ul li {
+  margin-left: -10px;
+}
+.article-toc a {
+  text-decoration: none;
+}
+.article h2 {
+  padding-top: 1em;
+  padding-bottom: 0.25em;
+  text-align: center;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  word-spacing: 0.1;
+  letter-spacing: 0.1em;
+  font-size: 1em;
+  font-variation-settings: "opsz" 18, "wght" 400, "GRAD" 0.25;
+}
+.article h3 {
+  margin-top: 1em;
+  margin-bottom: 0em;
+  padding-top: 1em;
+  padding-bottom: 0.25em;
+  text-align: left;
+  font-size: 1em;
+  font-variation-settings: "opsz" 18, "wght" 600, "GRAD" 0;
+}
+.article h4 {
+  margin-bottom: 0px;
+  text-align: right;
+  font-size: 1em;
+  font-style: italic;
+}
+.article ul li {
+  padding-left: 0px;
+  list-style-type: square;
+}
+.article ul li p {
+  margin-bottom: 0.5em;
+  text-indent: 0em;
+}
+.article ol li p {
+  margin-bottom: 0.5em;
+  text-indent: 0em;
+}
+.footnotes {
+  line-height: 1.35em;
+  font-size: 0.85em;
+}
+footer {
+  padding: 20px 20px 50px 20px;
+  text-align: center;
+  color: gray;
+  font-size: 0.8em;
+  font-variant-numeric: lining-nums;
+}
+/* Phones ----------- */
+@media screen and (max-width: 720px) {
+  html {
+    font-size: 18px;
+    font-variation-settings: "opsz" 12, "wght" 400, "GRAD" 0;
+  }
+  .main-index {
+    margin: auto;
+    width: auto;
+  }
+  .main-article {
+    margin: auto;
+    max-width: auto;
+  }
+  .top-links a {
+    margin: auto;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+  }
+  .top-links hr {
+    width: 95%;
+  }
+  .article {
+    box-shadow: none;
+    padding: 0px;
+    width: 90%;
+  }
+}
+
+@media (min-width: 1300px) {
+  .article-toc {
+    text-align: left;
+    position: fixed;
+    left: 15px;
+    top: 0;
+    scrollbar-width: none;
+    max-width: 280px;
+    max-height: 100%;
+    overflow: auto;
+    font-size: 0.9em;
+  }
+}
+/*
+
+  .article-toc ul li {
+    padding-top: 10px;
+  }
+
+  .article-toc::before {
+    content: "Daftar Isi";
+    position: fixed;
+    background-color: white;
+    padding-left: 20px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: underline;
+    width: 255px;
+  }
+
+  .footnotes {
+    position: fixed;
+    right: 15px;
+    top: 35px;
+    text-indent: -20px;
+    scrollbar-width: none;
+    max-width: 300px;
+    max-height: 90%;
+    padding-left: 30px;
+    padding-right: 15px;
+    line-height: 1.45;
+    overflow: auto;
+  }
+
+  .footnotes hr {
+    visibility: hidden;
+  }
+
+  .footnotes::before {
+    content: "Catatan-catatan Kaki";
+    position: fixed;
+    right: 0px;
+    background-color: white;
+    width: 320px;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    text-align: center;
+    text-decoration: underline;
+  }
+}
+*/
+
+/* Style the header: fixed position (always stay at the top) */
+.scrollbar {
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #ffffff;
+}
+
+/* The progress container (grey background) */
+.progress-container {
+  text-align: center;
+  width: 100%;
+  height: 5px;
+  background: #ffffff;
+}
+
+/* The progress bar (scroll indicator) */
+.progress-bar {
+  height: 5px;
+  background: #903;
+  width: 0%;
+}

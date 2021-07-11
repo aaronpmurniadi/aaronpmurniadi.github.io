@@ -1,57 +1,35 @@
-# Soot Spirits Jekyll Theme
+<h1 align="center"> hello, i'm Aaron P. Murniadi </h1>
+<h3 align="center"> Undergraduate Student at <br><a href="https://www.driyarkara.ac.id">Sekolah Tinggi Filsafat Driyarkara</a></h3>
 
-Soot Spirits is a responsive mobile ready lightweight two column Jekyll theme made with Bulma CSS. It is a great template for simple personal blogs with focus on typography.
+<hr>
 
-![mobile](tmp/mobile.png)
+### 💻 my computer stuff:
+- Creating custom blog like this
+- Hopping various distros of Linux
+- I use Manjaro, btw
+- HTML + CSS + Pandoc + Makefile = awesome custom blogging platform
 
-The text is made beautiful with combination of [League Gothic](https://www.fontsquirrel.com/fonts/league-gothic), [Roboto](https://fonts.google.com/specimen/Roboto) and [Open Sans](https://fonts.google.com/specimen/Open+Sans). Now who doesn't love them.
+### 📖 my philosophy stuff:
 
-![text](tmp/langslide.gif)
+Mostly, I work on philosophical questions concerning intersubjectivity, ethics, temporality, science, and education in general. Currently researching on ethical significance of the notion of time or temporality within Emmanuel Levinas's thought. My goal is to promote philosophy as part of Indonesia's education currlicula.
 
-### Demo
-[sootspirits.github.io](https://sootspirits.github.io)
+On the sideline, I also promote the use of Free and Open Source Software (FOSS) and Open Science
 
-### Some Good Features
+You could read my writings in my <a href="https://aaronpmurniadi.github.io/">blog</a>
 
-- Fully mobile ready
-- Beautiful typography
-- Two column layout suitable for a wide range of blogging habits
-- Fully customisable theme including the 'hello' text, quotes, nav items and sidebar widgets
+### 🚶 a little about myself:
+- I'm 21 years old, and I live in Jakarta, Indonesia 
+- I study Philosophy (duh!)
+- Tech and science enthusiast
+- I'm a little too addicted to coffee
 
-### Screenshots
-##### Deskop browser (full width)
-![fullwidth](tmp/fullwidth.png)
+<hr>
 
-##### Tablet browser (iPad)
-![tab](tmp/ipad.png)
-
-##### Mobile browser (320px and greater)
-![mobile](tmp/mobile.png)
-
-##### Hamburger menu toggle
-![hamburger](tmp/hamburger.gif)
-
-##### Basic navigation and footer
-![navi](tmp/navi.gif)
-
-### Theme Usage
-
-- [Get started](https://jekyllrb.com/docs/installation/) with having the necessary tools set up
-- Download the zip of this project or simple clone it
-- Delete the ```tmp/``` directory and any sample ```_posts```
-- Customize the variables in ```_config.yml``` file such that it reflects your information. Similarly, change the disqus username (or remove it altogether).
-- Replace footer links in the ```_layouts/default.html``` file with yours.
-- Replace the ```site:example.com``` in ```assets/js/custom.js``` with your site's address.
-
-### Credits
-- [Codepen hi-im-si](http://codepen.io/hi-im-si/pen/DHoup) for the header 'hello' typewriter text
-- [Bulma CSS](bulma.io/)
-- [Jekyll](https://jekyllrb.com)
-- [Github](https://github.com)
-
-### Licence
-MIT
-
-
-### What's up with the name?
-I was watching [My Neighbour Totoro](https://en.wikipedia.org/wiki/Susuwatari) while developing :-)
+<h2 align="center">✨ where you can find me ✨</h2>
+<p align="center">
+    <a href="https://www.linkedin.com/in/aaronpmurniadi/"><img src="https://img.shields.io/badge/linkedin-aaronpmurniadi-blue"></a>
+    <a href="https://www.instagram.com/aaronpmurniadi/"><img src="https://img.shields.io/badge/instagram-aaronpmurniadi-red"></a>
+    <a href="https://www.github.com/aaronpmurniadi/"><img src="https://img.shields.io/badge/github-aaronpmurniadi-lightgrey"></a>
+</p>
+<hr>
+<h4 align="center"><strong> feel free to look at my <a href="https://aaronpmurniadi.github.io/">blog</a> and leave a comment or questions! </strong> </h3>

@@ -1,0 +1,228 @@
+% arara: lualatex
+% arara: lualatex
+\documentclass[11pt,twoside,a5paper,openany]{memoir}
+%===========================================%
+% USEPACKAGES
+%===========================================%
+%\usepackage[fontsize=11pt,baseline=14pt]{grid}
+%\usepackage[bahasa]{babel}
+\usepackage{polyglossia}
+\setdefaultlanguage[variant=indonesian]{malay}
+\usepackage[pagewise,switch*]{lineno}
+\usepackage[noindentafter]{titlesec}
+\usepackage{titletoc}
+\usepackage{titleps}
+\usepackage{textcase}
+\usepackage{graphicx}
+%\usepackage{geometry}
+%\newgeometry{
+% inner=2cm,
+% outer=2cm,
+% bottom=2cm,
+% top=2cm,
+% headsep=1.2em,
+%}
+
+%\baselineskip=1.618\fontdimen6\font
+%\hsize=319.148446488500742pt
+%\vsize=1.618\hsize
+
+
+\setmainfont{Old Standard}
+\usepackage{canoniclayout}
+%\usepackage{lmodern} % monospace font
+%\usepackage[scale=0.89]{tgheros} % Helvetica is too big
+%\usepackage[baskervaldx,cmintegrals,bigdelims,vvarbb]{newtxmath} % math italic letters from Baskervaldx
+%\usepackage[cal=boondoxo]{mathalfa} % mathcal from STIX, unslanted a bit
+%\usepackage[lining,tabular]{ebgaramond}
+%\usepackage[]{NewCaledonia}
+%\usepackage{kpfonts}
+%\usepackage{coelacanth}
+%\usepackage{mathptmx}
+%\usepackage{venturis}
+
+%===========================================%
+% HEADINGS
+%===========================================%
+\settitlemarks{chapter,section,subsection}
+\renewcommand{\thesection}{\arabic{section}}
+\newpagestyle{main}{
+  \setheadrule{0pt}
+  \sethead[\thepage][\itshape\chaptertitle][]
+    {}{\itshape\sectiontitle}{\thepage}
+  \setfootrule{0pt}
+  \setfoot[][][]
+    {}{}{}
+}
+
+%===========================================%
+% TYPOGRAPHY
+%===========================================%
+%\usepackage[activate={true,nocompatibility},
+%kerning=true,spacing=true,tracking=true,final,
+%letterspace=80]{microtype}
+%\microtypecontext{spacing=nonfrench}
+\usepackage{microtype}
+\lefthyphenmin=3
+\righthyphenmin=3
+\def\tightlist{}
+\widowpenalty9000
+\clubpenalty9000
+\emergencystretch2em
+%\usepackage{enumitem} 
+%\setlist[enumerate]{itemsep=1pt}
+\setlength{\parindent}{0.95em}
+
+%===========================================%
+% SECTION TITLE
+%===========================================%
+\usepackage{remreset}
+\makeatletter
+  \@removefromreset{section}{chapter}
+\makeatother
+
+%\titleformat{\chapter}[block]
+%{\center\scshape\huge}
+%{}{0em}{}
+%\titlespacing{\chapter}{0pt}{15ex plus .1ex minus .2ex}{12ex}
+
+\makeatletter
+\def\thickhrulefill{\leavevmode \leaders \hrule height 1ex \hfill \kern \z@}
+\def\@makechapterhead#1{%
+  %\vspace*{50\p@}%
+  \vspace*{0\p@}%
+  {\parindent \z@ \centering \reset@font
+        \thickhrulefill\quad
+        \scshape\large \@chapapp{} \thechapter
+        \quad \thickhrulefill
+        \par\nobreak
+        \vspace*{10\p@}%
+        \interlinepenalty\@M
+        \hrule
+        \vspace*{10\p@}%
+        \huge \scshape \MakeUppercase{#1}\par\nobreak
+        \par
+        \vspace*{10\p@}%
+        \hrule
+    %\vskip 40\p@
+    \vskip 50\p@
+  }}
+%\def\@makeschapterhead#1{%
+%  %\vspace*{50\p@}%
+%  \vspace*{10\p@}%
+%  {\parindent \z@ \centering \reset@font
+%        \thickhrulefill
+%        \par\nobreak
+%        \vspace*{10\p@}%
+%        \interlinepenalty\@M
+%        \hrule
+%        \vspace*{10\p@}%
+%        \Huge \bfseries #1\par\nobreak
+%        \par
+%        \vspace*{10\p@}%
+%        \hrule
+%    %\vskip 40\p@
+%    \vskip 100\p@
+%  }}
+
+
+\titleformat{\section}[block]
+{\center\large\scshape}
+{Tesis \thesection:\space}{0em}{}
+\titlespacing{\section}{0pt}{5ex plus .1ex minus .2ex}{1.5ex}
+
+\titleformat{\subsection}[block]
+{\center\scshape}
+{}{0em}{}
+%\titlespacing{\subsection}{0pt}{4ex plus .1ex minus .2ex}{1.5ex}
+
+\titleformat{\subsubsection}[block]
+{\itshape}
+{}{0em}{}
+%\titlespacing{\subsubsection}{0pt}{2ex plus .1ex minus .2ex}{.5ex}
+
+\usepackage{etoolbox}
+\patchcmd{\quote}{\rightmargin}{\small\leftmargin 1.85em \rightmargin}{}{}
+
+\preto{\section}{\clearpageafterfirst}
+\newcommand{\clearpageafterfirst}{%
+  \gdef\clearpageafterfirst{\clearpage}%
+}
+%===========================================%
+% TOC STYLES
+%===========================================%
+\titlecontents{chapter}% <section-type>
+  [0em]% <left>
+  {\scshape\vspace{6pt}}% <above-code>
+  {}% <numbered-entry-format>
+  {}% <numberless-entry-format>
+  {\it\contentspage\vspace{2pt}}% <filler-page-format>
+
+\titlecontents{section}% <section-type>
+  [\quad]% <left>
+  {}% <above-code>
+  {Tesis\space\thecontentslabel:\space}% <numbered-entry-format>
+  {}% <numberless-entry-format>
+  {\it\contentspage\vspace{2pt}}% <filler-page-format>
+
+%===========================================%
+% TITLE PAGE
+%===========================================%
+\makeatletter
+\def\cover{
+\thispagestyle{empty}
+\begin{center}
+  {\thickhrulefill\par}
+  {\hrule\par}
+  {\Huge\scshape\uppercase Pembahasan Tesis-tesis\par}
+  {\Huge\scshape\uppercase Komprehensif\par}
+  {\hrule\par}
+  {\vspace*{\fill}\par}
+  {\Large Prodi Filsafat\par}
+  {\vspace*{\fill}\par}
+  \includegraphics[width=4cm,height=4cm]{logo-stfd-lustrum.png}
+  {\vspace*{\fill}\par}
+  {\Large Sekolah Tinggi Filsafat\par}
+  {\Large Driyarkara\par}
+  {\vspace*{\fill}\par}
+  {\large Jakarta\par}
+  {\large 2020\par}
+\end{center}
+\clearpage
+}
+
+\def\catatan{
+\vspace*{\fill}
+\section*{Catatan Ujian Komprehensif}
+\thispagestyle{empty}
+\begin{enumerate}
+\item Ujian Komprehensif akan diadakan pada bulan Desember dan Mei bagi mereka yang akan menyelesaikan studi Program Sarjana dalam Semester ybs.
+\item Lulus dalam ujian Komprehensif adalah syarat untuk memperoleh gelar Sarjana Strata 1.
+\item Mataujian yang tidak lulus, dapat diulang satu kali.
+\item Dalam Ujian Komprehensif mahasiswa akan diuji dalam tiga tesis, masing-masing dari salah satu dari mata ujian tersebut di atas, masing-masing selama 15 menit. Dari mata ujian manakah tesis yang diuji akan diambil tidak diberitahukan sebelumnya.
+\item Mahasiswa diharapkan dapat menguraikan sendiri, secara teratur dan dengan menekankan pokok dan inti permasalahannya, masalah yang termuat dalam tesis yang diujikan.
+\item Mahasiswa diuji menurut bahan yang diterimanya sewaktu kuliah. Apabila ada mahasiswa Ujian Komprehensif yang mendapat kuliah dalam mata ujian ybs. Dari pengajar lain daripada yang disebut di atas, ia harus mengajukannya kepada Ketua Panitia Ujian Komprehensif secara tertulis paling lambat empat minggu sebelum Ujian Komprehensif akan berlangsung.
+\end{enumerate}
+\vspace*{\fill}
+\clearpage
+}
+\usepackage[hidelinks]{hyperref}
+\begin{document}
+%\cover
+\catatan
+\setcounter{secnumdepth}{1}
+\setcounter{tocdepth}{1}
+%===========================================%
+% TABLE OF CONTENTS
+%===========================================%
+\thispagestyle{empty}
+\tableofcontents
+\clearpage
+\begingroup
+  \pagestyle{empty}%
+  \cleardoublepage
+\endgroup
+\pagestyle{main}
+%\linenumbers
+$body$
+\end{document}

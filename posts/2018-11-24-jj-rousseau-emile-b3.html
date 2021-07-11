@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="id">
+
+    <head>
+        <script>
+            window.onscroll = function () {
+                scrollbarFunction();
+                stickyheaderFunction();
+            };
+
+            function scrollbarFunction() {
+                var winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                var height =
+                    document.documentElement.scrollHeight -
+                    document.documentElement.clientHeight;
+                var scrolled = (winScroll / height) * 100;
+                document.getElementById("article-scrollbar").style.width = scrolled + "%";
+            }
+
+            function stickyheaderFunction() {
+                var header = document.getElementById("article-head");
+                var sticky = header.offsetTop;
+                if (window.pageYOffset > sticky) {
+                    header.classList.add("sticky");
+                } else {
+                    header.classList.remove("sticky");
+                }
+            }
+        </script>
+
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <meta charset="utf-8" />
+        <meta property="og:title" content="Aaron&#39;s Blog" />
+        <meta property="og:url" content="http://aaronpmurniadi.github.io/index.html" />
+        <meta property="og:site_name" content="Aaron&#39;s Blog" />
+        <meta property="og:locale" content="id_ID" />
+        <meta property="article:author" content="Aaron P. Murniadi" />
+        <script>
+            var Hyphenopoly = {
+                require: {
+                    "id": "honorificabilitudinitas",
+                    "en-us": "Supercalifragilisticexpialidocious"
+                },
+                setup: {
+                    selectors: {
+                        ".article p": {}
+                    }
+                }
+            };
+        </script>
+        <script src="../js/Hyphenopoly_Loader.js"></script>
+
+        <link href="../css/skeleton.css" rel="stylesheet" />
+        <link href="../css/custom.css" rel="stylesheet" />
+
+        <title>Aaron&#39;s Blog</title>
+    </head>
+
+    <body class="container">
+        <div class="row main-article">
+            <div class="twelve columns article">
+                <div class="article-border">
+                    <h1 class="header" style="text-align: left;">Jean-Jacques Rousseau, Emile: Book III</h1>
+                    <p class="article-author">Aaron Purnomo Murniadi </p>
+                    <p>2018-11-24</p>
+                </div>
+                <div class="article-toc">
+                    <h2>Daftar Isi</h2>
+                    
+                </div>
+                <div class="article-body">
+                    <!-- toc -->
+                    <p>From where does man’s weakness come? From the inequality between his strength and his desires. It is our passions that make us weak, because to satisfy them we would need more strength than nature gives us. Therefore, diminish desires, and you will increase strength. He who is capable of more than he desires has strength left over; he is certainly a very strong being.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="twelve columns">
+                <div class="outro">
+                    &copy; 2021 Aaron P. Murniadi <br> <i>For everything that was and no longer is.</i>
+                </div>
+            </div>
+        </div>
+
+        <div class="scrollbar">
+            <div class="progress-container">
+                <div class="progress-bar" id="article-scrollbar"></div>
+            </div>
+        </div>
+    </body>
+
+</html>
