@@ -24,7 +24,7 @@ PANDOC=/usr/bin/pandoc
 
 PANDOC_OPTIONS=--standalone
 
-PANDOC_HTML_OPTIONS=--toc --toc-depth=2 --template=posts/post-template.html --to html5+smart
+PANDOC_HTML_OPTIONS=--toc --template=posts/post-template.html --to html5+smart
 PANDOC_PDF_OPTIONS=
 PANDOC_DOCX_OPTIONS=
 PANDOC_RTF_OPTIONS=
