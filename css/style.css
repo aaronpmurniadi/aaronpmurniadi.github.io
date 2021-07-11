@@ -25,7 +25,7 @@
 }
 html {
   animation: fadein 1s;
-  text-rendering: optimizeLegibility;
+  /*text-rendering: optimizeLegibility;*/
   color: var(--text-color);
   font-size: 19px;
   font-variant-numeric: oldstyle-nums;
@@ -171,7 +171,6 @@ h5 {
   padding: 5px 10px 5px 0px;
   margin-top: 5px;
   float: left;
-  line-height: 1em;
   color: #903;
   display: inline;
 }
@@ -217,6 +216,7 @@ td {
 .article blockquote p {
   text-indent: 0em;
 }
+
 .article p {
   margin-top: 0.5em;
   margin-bottom: 1em;
@@ -247,7 +247,7 @@ h4 + p {
   text-align: center;
   line-height: 1.15em;
   font-size: 2.25em;
-  font-variation-settings: "opsz" 18, "wght" 400, "GRAD" 0;
+  font-variation-settings: "opsz" 18, "wght" 300, "GRAD" 0.5;
 }
 .article-toc {
   text-align: left;
@@ -262,12 +262,10 @@ h4 + p {
   padding-top: 1em;
   padding-bottom: 0.25em;
   text-align: center;
-  text-transform: uppercase;
+  font-style: italic;
   line-height: 1.5em;
-  word-spacing: 0.1;
-  letter-spacing: 0.1em;
-  font-size: 1em;
-  font-variation-settings: "opsz" 18, "wght" 400, "GRAD" 0.25;
+  font-size: 1.2em;
+  font-variation-settings: "opsz" 18, "wght" 500, "GRAD" 0.01;
 }
 .article h3 {
   margin-top: 1em;
