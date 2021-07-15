@@ -1,0 +1,7 @@
+site_name: My Docs
+site_url: https://example.com/
+pages:
+  - Home: 'README.md'
+
+theme:
+  name: material
